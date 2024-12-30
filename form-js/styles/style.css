@@ -1,0 +1,163 @@
+:root {
+  --focus-color: indigo;
+  --main-color: orange;
+  --focus-hover-color: seagreen;
+  --valid-color: seagreen;
+  --invalid-color: darkred;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: #222;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+  flex-grow: 1;
+}
+
+#form {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+
+.input,
+.textarea,
+.btn {
+  display: block;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #333;
+  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 1);
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.textarea {
+  resize: none;
+}
+
+.input,
+.textarea {
+  padding: 10px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.2s;
+
+  &:focus-visible {
+    background-color: var(--focus-hover-color);
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: var(--focus-hover-color);
+    color: #fff;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translate(0px, 5px);
+  }
+
+  &:disabled {
+    background-color: #aaa;
+    cursor: auto;
+    color: #fff;
+  }
+}
+
+.form__title {
+  text-align: center;
+  font-size: 36px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container .input:focus-visible + span::after {
+  content: "";
+  position: absolute;
+  background: url(../icons/pen.png) no-repeat center center/cover;
+  width: 40px;
+  height: 40px;
+  top: 10%;
+  left: -50px;
+  transform: rotate(-45deg);
+}
+
+.input-container .textarea:focus-visible + span::before {
+  content: "";
+  position: absolute;
+  background: url(../icons/pen.png) no-repeat center center/cover;
+  width: 40px;
+  height: 40px;
+  top: 5%;
+  left: -50px;
+  transform: rotate(-45deg);
+}
+
+.input,
+.textarea {
+  width: 100%;
+
+  &:focus-visible {
+    border: 1px solid var(--focus-color);
+    box-shadow: 0 6px 0 0 var(--focus-color);
+    background-image: url;
+  }
+}
+
+.input.valid {
+  border: 1px solid var(--valid-color);
+  box-shadow: 0 6px 0 0 var(--valid-color);
+}
+
+.input.invalid {
+  border: 1px solid var(--invalid-color);
+  box-shadow: 0 6px 0 0 var(--invalid-color);
+  background-image: url(../icons/warning.svg);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: center;
+  background-size: 20px;
+}
+
+.textarea.valid {
+  border: 1px solid var(--valid-color);
+  box-shadow: 0 6px 0 0 var(--valid-color);
+}
+
+.textarea.invalid {
+  border: 1px solid var(--invalid-color);
+  box-shadow: 0 6px 0 0 var(--invalid-color);
+  background-image: url(../icons/warning.svg);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 10px;
+  background-size: 20px;
+}

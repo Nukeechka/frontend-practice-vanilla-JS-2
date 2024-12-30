@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <form id="form" action="">
+          <h2 class="form__title">Feedback</h2>
+          <div class="input-container">
+            <input
+              type="text"
+              class="input check"
+              name="firstname"
+              placeholder="Firstname"
+              id="firstname"
+            />
+            <span></span>
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              class="input check"
+              name="surname"
+              placeholder="Surname"
+              id="surname"
+            />
+            <span></span>
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              class="input check"
+              name="email"
+              placeholder="Email"
+              id="email"
+            />
+            <span></span>
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              class="input check"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+            />
+            <span></span>
+          </div>
+          <div class="input-container">
+            <textarea
+              rows="5"
+              cols="10"
+              name="message"
+              id="message"
+              placeholder="Message..."
+              class="textarea check"
+              spellcheck="true"
+            ></textarea>
+            <span></span>
+          </div>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
