@@ -1,4 +1,4 @@
-# frontend-retake
+# frontend-js
 
 1. Статичная веб-страница:
 
